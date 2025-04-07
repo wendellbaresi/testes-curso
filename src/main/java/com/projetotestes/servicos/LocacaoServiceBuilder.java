@@ -26,6 +26,7 @@ public class LocacaoServiceBuilder {
             }
         }
 
+
         LocacaoUserDTO locacaoUserDTO = new LocacaoUserDTO();
         locacaoUserDTO.setFilmesDTO(filmes);
         locacaoUserDTO.setUsuarioDTO(usuarioDTO);
