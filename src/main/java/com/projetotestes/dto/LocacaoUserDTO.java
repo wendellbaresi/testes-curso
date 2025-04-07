@@ -11,6 +11,7 @@ public class LocacaoUserDTO {
     private Date dataRetorno;
     private Double valor;
 
+
     public LocacaoUserDTO(){}
 
     public LocacaoUserDTO(UsuarioDTO usuarioDTO, List<FilmeDTO> filmesDTO, Date dataLocacao, Date dataRetorno, Double valor) {
