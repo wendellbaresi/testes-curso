@@ -16,6 +16,7 @@ public class UsuarioDTOBuilder {
         return builder;
     }
 
+
     public UsuarioDTO agora(){
         return usuarioDTO;
     }
