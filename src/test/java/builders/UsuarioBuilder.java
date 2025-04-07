@@ -6,9 +6,7 @@ public class UsuarioBuilder {
 
     private UsuarioDTO usuarioDTO;
 
-    private UsuarioBuilder(){
-
-    }
+    private UsuarioBuilder(){}
 
     public static UsuarioBuilder umUsuario(){
         UsuarioBuilder builder = new UsuarioBuilder();
