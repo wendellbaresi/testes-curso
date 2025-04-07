@@ -1,6 +1,6 @@
 package matchers;
 
-import br.ce.wcaquino.utils.DataUtils;
+import com.projetotestes.utils.DataUtils;
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;
 

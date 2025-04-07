@@ -1,12 +1,11 @@
 package servicos;
 
-import br.ce.wcaquino.Exception.FilmeSemEstoqueException;
-import br.ce.wcaquino.Exception.LocadoraException;
-import br.ce.wcaquino.dto.FilmeDTO;
-import br.ce.wcaquino.dto.LocacaoDTO;
-import br.ce.wcaquino.entidades.Filme;
-import br.ce.wcaquino.entidades.Usuario;
-import br.ce.wcaquino.servicos.LocacaoServiceCalculadora;
+import com.projetotestes.Exception.FilmeSemEstoqueException;
+import com.projetotestes.Exception.LocadoraException;
+import com.projetotestes.dto.FilmeDTO;
+import com.projetotestes.dto.LocacaoDTO;
+import com.projetotestes.entidades.Usuario;
+import com.projetotestes.servicos.LocacaoServiceCalculadora;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;

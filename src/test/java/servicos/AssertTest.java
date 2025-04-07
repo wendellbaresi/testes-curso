@@ -1,11 +1,10 @@
 package servicos;
 
-import br.ce.wcaquino.Exception.FilmeSemEstoqueException;
-import br.ce.wcaquino.entidades.Filme;
-import br.ce.wcaquino.entidades.Locacao;
-import br.ce.wcaquino.entidades.Usuario;
-import br.ce.wcaquino.servicos.LocacaoService;
-import br.ce.wcaquino.utils.DataUtils;
+import com.projetotestes.entidades.Filme;
+import com.projetotestes.entidades.Locacao;
+import com.projetotestes.entidades.Usuario;
+import com.projetotestes.servicos.LocacaoService;
+import com.projetotestes.utils.DataUtils;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -13,7 +12,7 @@ import org.junit.rules.ErrorCollector;
 
 import java.util.Date;
 
-import static br.ce.wcaquino.utils.DataUtils.isMesmaData;
+import static com.projetotestes.utils.DataUtils.isMesmaData;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;

@@ -1,13 +1,11 @@
 package servicos;
 
-import br.ce.wcaquino.entidades.Filme;
-import br.ce.wcaquino.entidades.Locacao;
-import br.ce.wcaquino.entidades.Usuario;
-import br.ce.wcaquino.servicos.LocacaoService;
-import br.ce.wcaquino.utils.DataUtils;
-import org.junit.After;
+import com.projetotestes.entidades.Filme;
+import com.projetotestes.entidades.Locacao;
+import com.projetotestes.entidades.Usuario;
+import com.projetotestes.servicos.LocacaoService;
+import com.projetotestes.utils.DataUtils;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Date;

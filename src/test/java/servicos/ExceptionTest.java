@@ -1,16 +1,13 @@
 package servicos;
 
-import br.ce.wcaquino.Exception.FilmeSemEstoqueException;
-import br.ce.wcaquino.Exception.LocadoraException;
-import br.ce.wcaquino.entidades.Filme;
-import br.ce.wcaquino.entidades.Locacao;
-import br.ce.wcaquino.entidades.Usuario;
-import br.ce.wcaquino.servicos.LocacaoService;
-import br.ce.wcaquino.servicos.LocacaoServiceSemEstoque;
+import com.projetotestes.Exception.FilmeSemEstoqueException;
+import com.projetotestes.Exception.LocadoraException;
+import com.projetotestes.entidades.Filme;
+import com.projetotestes.entidades.Usuario;
+import com.projetotestes.servicos.LocacaoServiceSemEstoque;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ErrorCollector;
 import org.junit.rules.ExpectedException;
 
 import static org.hamcrest.core.Is.is;

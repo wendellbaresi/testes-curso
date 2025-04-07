@@ -1,16 +1,15 @@
 package servicos;
 
-import br.ce.wcaquino.Exception.FilmeSemEstoqueException;
-import br.ce.wcaquino.Exception.LocadoraException;
-import br.ce.wcaquino.dto.FilmeDTO;
-import br.ce.wcaquino.dto.LocacaoDTO;
-import br.ce.wcaquino.entidades.Filme;
-import br.ce.wcaquino.entidades.Locacao;
-import br.ce.wcaquino.entidades.Usuario;
-import br.ce.wcaquino.servicos.LocacaoService;
-import br.ce.wcaquino.servicos.LocacaoServiceDesafio;
-import br.ce.wcaquino.servicos.LocacaoServiceSemEstoque;
-import br.ce.wcaquino.utils.DataUtils;
+import com.projetotestes.Exception.FilmeSemEstoqueException;
+import com.projetotestes.Exception.LocadoraException;
+import com.projetotestes.dto.FilmeDTO;
+import com.projetotestes.entidades.Filme;
+import com.projetotestes.entidades.Locacao;
+import com.projetotestes.entidades.Usuario;
+import com.projetotestes.servicos.LocacaoService;
+import com.projetotestes.servicos.LocacaoServiceDesafio;
+import com.projetotestes.servicos.LocacaoServiceSemEstoque;
+import com.projetotestes.utils.DataUtils;
 import org.hamcrest.core.Is;
 import org.junit.Assert;
 import org.junit.Before;
@@ -23,7 +22,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import static br.ce.wcaquino.utils.DataUtils.isMesmaData;
+import static com.projetotestes.utils.DataUtils.isMesmaData;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
