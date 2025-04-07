@@ -37,6 +37,7 @@ public class BuilderTest {
 
     private LocacaoServiceBuilder service;
 
+
     @Before
     public void setUp(){
         service = new LocacaoServiceBuilder();
