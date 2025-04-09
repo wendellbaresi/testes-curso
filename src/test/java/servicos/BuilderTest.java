@@ -18,6 +18,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import static builders.FilmeDTOBuilder.umFilme;
+import static builders.FilmeDTOBuilder.umFilmeSemEstoque;
 import static com.projetotestes.utils.DataUtils.isMesmaData;
 import static com.projetotestes.utils.DataUtils.obterDataComDiferencaDias;
 import static matchers.MatchersProprios.ehHoje;
@@ -25,7 +27,6 @@ import static matchers.MatchersProprios.ehHojeComDiferencaDias;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
-import static org.junit.Assert.assertThat;
 
 public class BuilderTest {
 
@@ -48,8 +49,7 @@ public class BuilderTest {
 
 
         UsuarioDTO usuarioDTO = UsuarioDTOBuilder.umUsuarioDTO().agora();
-        List<FilmeDTO> filmes = Arrays.asList(new FilmeDTO("Filme 1", 1, 5.0));
-
+        List<FilmeDTO> filmes = Arrays.asList(umFilme().comValor(5.0).agora());
         LocacaoUserDTO locacao = service.alugarFilme(usuarioDTO, filmes);
 
 
@@ -71,8 +71,7 @@ public class BuilderTest {
 
         // cenario
         UsuarioDTO usuarioDTO = UsuarioDTOBuilder.umUsuarioDTO().agora();
-        List<FilmeDTO> filmes = Arrays.asList(new FilmeDTO("Filme 1", 0, 5.0));
-
+        List<FilmeDTO> filmes = Arrays.asList(umFilmeSemEstoque().agora());
         service.alugarFilme(usuarioDTO, filmes);
     }
 
@@ -89,8 +88,7 @@ public class BuilderTest {
     @Test
     public void testLocacao_FilmeVazio() throws FilmeSemEstoqueException, LocadoraException{
         UsuarioDTO usuarioDTO = UsuarioDTOBuilder.umUsuarioDTO().agora();
-        List<FilmeDTO> filmes = Arrays.asList(new FilmeDTO("Filme 1", 1, 5.0));
-
+        List<FilmeDTO> filmes = Arrays.asList(umFilme().agora());
         exception.expect(LocadoraException.class);
         exception.expectMessage("Filme vazio");
 
