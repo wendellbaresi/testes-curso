@@ -19,39 +19,43 @@ public class ExceptionTest {
     public ExpectedException exception = ExpectedException.none();
 
     @Test
-    public void testLocacao_usuarioVazio() throws FilmeSemEstoqueException{ // As Excecoes de extensao sao FilmeSemEstoqueException e LocacaoException
+    public void testLocacao_usuarioVazio() throws FilmeSemEstoqueException, LocadoraException { // As Excecoes de extensao sao FilmeSemEstoqueException e LocacaoException
 
         // cenario
         LocacaoServiceSemEstoque service = new LocacaoServiceSemEstoque();
         Filme filme = new Filme("Filme 1", 2, 5.0);
 
-        //acao
-        try {
-            service.alugarFilme_SemEstoque(null, filme);
-            Assert.fail();
-        } catch (LocadoraException e){
-            assertThat(e.getMessage(), is("Usuario vazio"));
-        }
+        exception.expect(LocadoraException.class);
+        exception.expectMessage("Usuario vazio");
+
+        // Ação
+        service.alugarFilme_SemEstoque(null, filme);
     }
 
     @Test
-    public void testLocacao_usuarioVazio2() throws FilmeSemEstoqueException { // Excecao tratada pelo JUnit
+    public void testLocacao_usuarioVazio2() throws FilmeSemEstoqueException, LocadoraException { // Excecao tratada pelo JUnit
 
-        // cenario
         // cenario
         LocacaoServiceSemEstoque service = new LocacaoServiceSemEstoque();
         Filme filme = new Filme("Filme 1", 2, 5.0);
-        Usuario usuario = new Usuario("Usuario 1");
+        //Usuario usuario = new Usuario("Usuario 1");
 
-        //acao
-        try {
-            service.alugarFilme_SemEstoque(usuario, filme);
-            Assert.fail();
-        } catch (LocadoraException e){
-            assertThat(e.getMessage(), is("Usuario vazio"));
-        }
+        // Exceção esperada
+        exception.expect(LocadoraException.class);
+        exception.expectMessage("Usuario vazio");
 
-        System.out.println("Forma Robusta");
+        // Ação
+        service.alugarFilme_SemEstoque(null, filme);
+
+           //acao
+        //try {
+        //    service.alugarFilme_SemEstoque(usuario, filme);
+        //    Assert.fail();
+        //} catch (LocadoraException e){
+        //   assertThat(e.getMessage(), is("Usuario vazio"));
+        //}
+
+        //System.out.println("Forma Robusta");
     }
 
     @Test
@@ -59,10 +63,17 @@ public class ExceptionTest {
         LocacaoServiceSemEstoque service = new LocacaoServiceSemEstoque();
         Usuario usuario = new Usuario("Usuario 1");
 
+        // Exceção esperada
         exception.expect(LocadoraException.class);
         exception.expectMessage("Filme vazio");
 
-        service.alugarFilme_SemEstoque(usuario,null);
+        // Ação
+        service.alugarFilme_SemEstoque(usuario, null);
+
+        //exception.expect(LocadoraException.class);
+        //exception.expectMessage("Filme vazio");
+
+        //service.alugarFilme_SemEstoque(usuario,null);
 
         System.out.println("Forma Nova");
     }
