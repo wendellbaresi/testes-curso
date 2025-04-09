@@ -22,7 +22,7 @@ public class LocacaoServiceBuilder {
         }
         for (FilmeDTO filmeDTO : filmes){
             if (filmeDTO.getEstoque() == 0){
-                throw new FilmeSemEstoqueException();
+                throw new FilmeSemEstoqueException("Filme sem estoque");
             }
         }
 
